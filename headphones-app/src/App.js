@@ -1,24 +1,26 @@
 import "./App.css";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Header from "./components/Header";
+import HeadphonesPage from "./components/HeadphonesPage";
+import OutletPage from "./components/OutletPage";
+import SalePage from "./components/SalePage";
+import SpeakersPage from "./components/SpeakersPage";
+import ErrorPage from "./components/ErrorPage";
 
 function App() {
   return (
     <section className="main-container">
       <section className="blur-container">
-        <div className="grid-navbar">navbar</div>
-        <div className="grid-text-left">text-left</div>
-        <div className="grid-pagination">pagination</div>
-        <div className="grid-title">title</div>
-        <div className="grid-description">
-          <div>description-left</div>
-          <div>description-right</div>
-        </div>
-        <div className="grid-slider-stars">
-          <div>Slider button</div>
-          <div>Price and stars</div>
-        </div>
-        <div className="grid-canvas">canvas</div>
-        <div className="grid-social-icons">social-icons</div>
-        <div className="grid-text-right">text-right </div>
+        <Router>
+          <Header />
+          <Switch>
+            <Route exact path="/" component={HeadphonesPage} />
+            <Route path="/outlet" component={OutletPage} />
+            <Route path="/sale" component={SalePage} />
+            <Route path="/speakers" component={SpeakersPage} />
+            <Route component={ErrorPage} />
+          </Switch>
+        </Router>
       </section>
     </section>
   );
