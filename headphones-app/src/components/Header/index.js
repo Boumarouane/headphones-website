@@ -5,7 +5,7 @@ const Header = () => {
   return (
     <div className="grid-navbar">
       <nav className="nav">
-        {/* <div className="menu"></div> */}
+        <div className="menu-hamburger">hamburger</div>
         <ul className="nav-list">
           <li>
             <Link to="/" className="list">HEADPHONES</Link>

@@ -6,6 +6,7 @@ import OutletPage from "./components/OutletPage";
 import SalePage from "./components/SalePage";
 import SpeakersPage from "./components/SpeakersPage";
 import ErrorPage from "./components/ErrorPage";
+import AsideRight from "./components/AsideRight";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <section className="blur-container">
         <Router>
           <Header />
+          <AsideRight/>
           <Switch>
             <Route exact path="/" component={HeadphonesPage} />
             <Route path="/outlet" component={OutletPage} />
