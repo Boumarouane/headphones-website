@@ -1,16 +1,23 @@
 import React from "react";
+import Pagination from "../Pagination";
+import ProductDescription from "../ProductDescription";
 import StaticText from "../StaticText";
+import TitleAndBrand from "../TitleAnBrand";
+
 const HeadphonesPage = () => {
   return (
     <>
-      <div className="grid-text-left">
+      <aside className="grid-text-left">
         <StaticText firstText="OVEREAR" secondText="HEADPHONES" />
-      </div>
-      <div className="grid-pagination">pagination</div>
-      <div className="grid-title">title</div>
+      </aside>
+      <aside className="grid-pagination">
+        <Pagination />
+      </aside>
+      <article className="grid-title">
+        <TitleAndBrand/>
+      </article>
       <div className="grid-description">
-        <div>description-left</div>
-        <div>description-right</div>
+        <ProductDescription/>
       </div>
       <div className="grid-slider-stars">
         <div>Slider button</div>
