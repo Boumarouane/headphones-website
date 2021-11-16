@@ -1,6 +1,8 @@
 import React from "react";
 import Pagination from "../Pagination";
+import Price from "../Price";
 import ProductDescription from "../ProductDescription";
+import SlideButton from "../SlideButton";
 import StaticText from "../StaticText";
 import TitleAndBrand from "../TitleAnBrand";
 
@@ -20,8 +22,8 @@ const HeadphonesPage = () => {
         <ProductDescription/>
       </div>
       <div className="grid-slider-stars">
-        <div>Slider button</div>
-        <div>Price and stars</div>
+        <SlideButton/>
+        <Price/>
       </div>
       <div className="grid-canvas">canvas</div>
     </>

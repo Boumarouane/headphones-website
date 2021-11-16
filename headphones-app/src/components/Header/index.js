@@ -1,23 +1,35 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const Header = () => {
   return (
     <div className="grid-navbar">
       <nav className="nav">
-        <div className="menu-hamburger">hamburger</div>
+        <div className="menu-hamburger">
+          <div className="line"></div>
+          <div className="line"></div>
+          <div className="line"></div>
+        </div>
         <ul className="nav-list">
-          <li>
-            <Link to="/" className="list">HEADPHONES</Link>
+          <li className="nav-links">
+            <NavLink exact to="/" className="list" activeClassName="active">
+              HEADPHONES
+            </NavLink>
           </li>
           <li>
-            <Link to="/speakers" className="list">SPEAKERS</Link>
+            <NavLink to="/speakers" className="list" activeClassName="active">
+              SPEAKERS
+            </NavLink>
           </li>
           <li>
-            <Link to="/outlet" className="list">OUTLET</Link>
+            <NavLink to="/outlet" className="list" activeClassName="active">
+              OUTLET
+            </NavLink>
           </li>
           <li>
-            <Link to="/sale" className="list">SALE</Link>
+            <NavLink to="/sale" className="list" activeClassName="active">
+              SALE
+            </NavLink>
           </li>
         </ul>
       </nav>
